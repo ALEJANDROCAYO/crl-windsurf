@@ -1,0 +1,600 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Documentación del equipo de Windsurf del Club de Regatas Lima: Techno 293 e iQFOiL. Reglamentos, trámites, calendario y guías, con enlace a cada documento original.">
+<title>CRL Windsurf · Techno 293 e iQFOiL</title>
+<link rel="icon" href="img/logo-crl.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;600;700;800&family=Figtree:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<style>
+/* Layout: portada con foto a sangre + buscador; franja de las dos clases; cuadrícula de temas con iconos; artículos desplegables en columna de lectura con fotos del equipo entre secciones. Mar de Paracas: azul profundo, turquesa de espuma, rojo de las velas PER, arena de las dunas. */
+:root{
+  --bg:#f3f6f9; --surface:#ffffff; --surface-2:#e6edf3; --fg:#0c1b2a; --muted:#52657a; --line:#cfd9e3;
+  --ocean:#061a2e; --ocean-2:#0b3b63; --ocean-fg:#eef6fb;
+  --accent:#0e9aa8; --accent-bright:#19c3d4; --accent-soft:#d6f1f4;
+  --sail:#e4322b; --sail-soft:#fde3e1; --sand:#e9d8b4;
+  --mark:#ffe58a; --h2:#0b3b63;
+  --tag-dep:#dbf0e6; --tag-dep-fg:#166a47; --tag-pad:#fde9d4; --tag-pad-fg:#8d4a12; --tag-ent:#e3e4f6; --tag-ent-fg:#3d3c92;
+  --display:"Saira Condensed","Arial Narrow",Impact,sans-serif; --body:"Figtree","Segoe UI",Helvetica,Arial,sans-serif;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#07131f; --surface:#0f2133; --surface-2:#16293d; --fg:#e6eef6; --muted:#9db0c3; --line:#243a51;
+  --ocean:#040f1b; --ocean-2:#0a2c4a; --ocean-fg:#eef6fb; --accent:#2fd0df; --accent-bright:#5fe3ef; --accent-soft:#0f3a42;
+  --sail:#ff5a52; --sail-soft:#4a1a17; --sand:#8d7a52; --mark:#6b5a12; --h2:#5fe3ef;
+  --tag-dep:#143827; --tag-dep-fg:#9fe3bf; --tag-pad:#3f2712; --tag-pad-fg:#f7c99b; --tag-ent:#23234a; --tag-ent-fg:#c5c3f5;
+  color-scheme:dark }}
+:root[data-theme="dark"]{
+  --bg:#07131f; --surface:#0f2133; --surface-2:#16293d; --fg:#e6eef6; --muted:#9db0c3; --line:#243a51;
+  --ocean:#040f1b; --ocean-2:#0a2c4a; --ocean-fg:#eef6fb; --accent:#2fd0df; --accent-bright:#5fe3ef; --accent-soft:#0f3a42;
+  --sail:#ff5a52; --sail-soft:#4a1a17; --sand:#8d7a52; --mark:#6b5a12; --h2:#5fe3ef;
+  --tag-dep:#143827; --tag-dep-fg:#9fe3bf; --tag-pad:#3f2712; --tag-pad-fg:#f7c99b; --tag-ent:#23234a; --tag-ent-fg:#c5c3f5;
+  color-scheme:dark }
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.55;margin:0;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--ocean)}
+a{color:var(--accent)}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.02}
+.wrap{max-width:1040px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.narrow{max-width:860px}
+[hidden]{display:none!important}
+img{max-width:100%;display:block}
+
+/* ───── Portada ───── */
+.hero{position:relative;background:var(--ocean);color:var(--ocean-fg);overflow:hidden;isolation:isolate}
+.hero .photo{position:absolute;inset:0;z-index:-2;background:url(img/fleet-iqfoil.jpg) center 55%/cover no-repeat}
+.hero .shade{position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(6,26,46,.55) 0%,rgba(6,26,46,.25) 35%,rgba(6,26,46,.85) 100%)}
+.hero .wrap{padding-block:18px 64px;display:flex;flex-direction:column;gap:22px;min-height:520px;justify-content:flex-end}
+.brand{display:flex;align-items:center;gap:14px}
+.brand img{width:46px;height:auto;filter:drop-shadow(0 1px 2px rgba(0,0,0,.4))}
+.brand .t{font-family:var(--display);font-weight:600;letter-spacing:.12em;text-transform:uppercase;font-size:14px;line-height:1.2}
+.brand .t small{display:block;font-weight:500;letter-spacing:.2em;font-size:11px;opacity:.8}
+.hero h1{font-size:clamp(46px,9vw,92px);font-weight:800;letter-spacing:.01em;text-transform:uppercase;text-shadow:0 2px 14px rgba(0,0,0,.35);max-width:14ch}
+.hero h1 span{color:var(--accent-bright)}
+.hero p.lede{margin:0;max-width:58ch;font-size:17px;text-shadow:0 1px 8px rgba(0,0,0,.5)}
+.wave{display:block;width:100%;height:44px;margin-top:-44px;position:relative;z-index:2}
+.wave path{fill:var(--bg)}
+
+/* búsqueda */
+.searchbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--ocean);color:var(--ocean-fg);box-shadow:0 2px 12px rgba(0,0,0,.25)}
+.searchbar .wrap{padding-block:10px;display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center}
+.search{flex:1 1 320px;display:flex;align-items:center;gap:10px;background:var(--surface);color:var(--fg);border-radius:12px;padding:0 12px;border:2px solid transparent;min-width:0}
+.search:focus-within{border-color:var(--accent-bright)}
+.search svg{flex:none;width:20px;height:20px;color:var(--muted)}
+.search input{flex:1;min-width:0;border:0;background:transparent;color:inherit;font:inherit;font-size:17px;padding:11px 0;outline:none}
+.search input::-webkit-search-cancel-button{display:none}
+.search button{border:0;background:transparent;color:var(--muted);font:inherit;cursor:pointer;padding:6px}
+.filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.filters .lbl{font-size:12px;letter-spacing:.14em;text-transform:uppercase;opacity:.75;font-family:var(--display);font-weight:600}
+.chip{border:1px solid rgba(255,255,255,.35);background:transparent;color:inherit;border-radius:999px;padding:6px 13px;font:inherit;font-size:14px;cursor:pointer;display:inline-flex;gap:6px;align-items:center}
+.chip svg{width:15px;height:15px}
+.chip[aria-pressed="true"]{background:var(--accent-bright);color:var(--ocean);border-color:var(--accent-bright);font-weight:600}
+.chip:focus-visible,.search input:focus-visible,.card summary:focus-visible,.tile:focus-visible,.classcard a:focus-visible{outline:2px solid var(--accent-bright);outline-offset:2px}
+.status{color:var(--muted);font-size:14px;min-height:1.6em}
+
+/* ───── Clases ───── */
+.classes{padding-block:26px 8px}
+.classes .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.classcard{position:relative;border-radius:16px;overflow:hidden;color:#fff;min-height:250px;display:flex;flex-direction:column;justify-content:flex-end;background:var(--ocean-2);isolation:isolate}
+.classcard .ph{position:absolute;inset:0;z-index:-2;background-size:cover;background-position:center}
+.classcard .sh{position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(4,15,27,.05) 20%,rgba(4,15,27,.88) 100%)}
+.classcard .in{padding:18px 18px 16px;display:flex;flex-direction:column;gap:8px}
+.classcard .logo{height:58px;width:auto;object-fit:contain;align-self:flex-start;background:rgba(255,255,255,.92);border-radius:8px;padding:6px 10px}
+.classcard .logo.dark{background:rgba(0,0,0,.55)}
+.classcard h3{font-size:30px;font-weight:700;text-transform:uppercase;letter-spacing:.02em}
+.classcard p{margin:0;font-size:15px;max-width:48ch;opacity:.95}
+.classcard .row{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+.btn{display:inline-flex;align-items:center;gap:7px;text-decoration:none;font-family:var(--display);font-weight:600;letter-spacing:.06em;text-transform:uppercase;font-size:14px;border-radius:8px;padding:8px 12px;background:var(--accent-bright);color:var(--ocean)}
+.btn.ghost{background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.4)}
+.btn svg{width:15px;height:15px}
+
+/* ───── Temas (cuadrícula) ───── */
+.topics{padding-block:22px 6px}
+.topics h2{font-size:18px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:12px}
+.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;list-style:none;margin:0;padding:0}
+.tile{display:flex;flex-direction:column;gap:10px;text-decoration:none;color:var(--fg);background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px;min-height:118px;transition:transform .15s,border-color .15s}
+.tile:hover{transform:translateY(-2px);border-color:var(--accent)}
+.tile .ic{width:34px;height:34px;color:var(--accent);background:var(--accent-soft);border-radius:9px;display:grid;place-items:center}
+.tile .ic svg{width:20px;height:20px}
+.tile b{font-family:var(--display);font-size:19px;font-weight:600;line-height:1.1}
+.tile small{color:var(--muted);font-size:13px;margin-top:auto;font-variant-numeric:tabular-nums}
+
+/* ───── Secciones ───── */
+main .wrap{padding-block:14px 40px;display:flex;flex-direction:column;gap:38px}
+section.topic{scroll-margin-top:140px}
+section.topic .head{display:flex;align-items:center;gap:14px;padding-bottom:10px;border-bottom:3px solid var(--h2);margin-bottom:10px}
+section.topic .head .ic{flex:none;width:44px;height:44px;border-radius:12px;background:var(--h2);color:#fff;display:grid;place-items:center}
+:root[data-theme="dark"] section.topic .head .ic{color:var(--ocean)}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) section.topic .head .ic{color:var(--ocean)} }
+section.topic .head .ic svg{width:24px;height:24px}
+section.topic h2{font-size:34px;font-weight:700;color:var(--h2);text-transform:uppercase;letter-spacing:.01em}
+section.topic p.intro{margin:0 0 10px;color:var(--muted);max-width:65ch}
+.cards{display:flex;flex-direction:column;gap:10px}
+
+/* ficha */
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;border-left:5px solid var(--accent)}
+.card summary{list-style:none;cursor:pointer;padding:14px 16px;display:grid;grid-template-columns:1fr auto;gap:4px 12px;align-items:start}
+.card summary::-webkit-details-marker{display:none}
+.card summary h3{font-size:23px;font-weight:600;grid-column:1}
+.card summary .sum{grid-column:1;color:var(--muted);font-size:15px;max-width:65ch}
+.card summary .tags{grid-column:1;display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+.card summary .chev{grid-column:2;grid-row:1/4;align-self:center;width:24px;height:24px;color:var(--muted);transition:transform .2s}
+.card[open] summary .chev{transform:rotate(180deg)}
+.card[open] summary{border-bottom:1px solid var(--line)}
+.tag{font-size:12px;font-weight:600;letter-spacing:.04em;border-radius:5px;padding:2px 8px}
+.tag.dep{background:var(--tag-dep);color:var(--tag-dep-fg)}
+.tag.pad{background:var(--tag-pad);color:var(--tag-pad-fg)}
+.tag.ent{background:var(--tag-ent);color:var(--tag-ent-fg)}
+.card .body{padding:14px 16px 18px;display:flex;flex-direction:column;gap:12px;max-width:72ch}
+.card .body p{margin:0}
+.card .body ul{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
+.card .body h4{font-family:var(--display);font-size:17px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin:6px 0 -4px}
+.card .body .note{background:var(--accent-soft);border-left:4px solid var(--accent);padding:10px 12px;border-radius:0 8px 8px 0;font-size:15px}
+.card .body .kv{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:15px}
+.card .body .kv b{font-weight:600;white-space:nowrap}
+.card .body .kv span{min-width:0}
+.src{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+.src a{display:inline-flex;align-items:center;gap:6px;text-decoration:none;font-size:14px;font-weight:500;background:var(--surface-2);color:var(--fg);border-radius:8px;padding:6px 10px}
+.src a:hover{background:var(--accent-soft)}
+.src a svg{width:15px;height:15px;color:var(--accent)}
+mark{background:var(--mark);color:inherit;padding:0 2px;border-radius:2px}
+.hidden{display:none}
+.tbl{overflow-x:auto}
+table{border-collapse:collapse;font-size:14px;width:100%;font-variant-numeric:tabular-nums}
+th,td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-family:var(--display);letter-spacing:.06em;text-transform:uppercase;font-size:13px;color:var(--muted)}
+
+/* banners de foto entre secciones */
+.banner{position:relative;border-radius:18px;overflow:hidden;min-height:220px;display:flex;align-items:flex-end;color:#fff;isolation:isolate;background:var(--ocean-2)}
+.banner .ph{position:absolute;inset:0;z-index:-2;background-size:cover;background-position:center}
+.banner .sh{position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(4,15,27,0) 30%,rgba(4,15,27,.8) 100%)}
+.banner .cap{padding:16px 18px;display:flex;flex-direction:column;gap:2px}
+.banner .cap b{font-family:var(--display);font-size:24px;font-weight:700;text-transform:uppercase;letter-spacing:.02em}
+.banner .cap span{font-size:14px;opacity:.9}
+
+/* pie */
+footer{background:var(--ocean);color:var(--ocean-fg)}
+footer .wrap{padding-block:26px 30px;display:flex;flex-direction:column;gap:14px;font-size:14px}
+footer .brand .t{opacity:.95}
+footer a{color:var(--accent-bright)}
+footer p{margin:0;opacity:.85;max-width:70ch}
+@media (prefers-reduced-motion: reduce){ .card summary .chev,.tile{transition:none} html{scroll-behavior:auto} }
+@media (max-width:480px){ .hero .wrap{min-height:440px} .classcard{min-height:220px} }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="photo" role="img" aria-label="Flota iQFOiL del CRL navegando frente a las dunas de Paracas"></div>
+  <div class="shade"></div>
+  <div class="wrap">
+    <div class="brand">
+      <img src="img/logo-crl.png" alt="Club de Regatas Lima">
+      <div class="t">Club de Regatas Lima<small>Equipo Windsurf · Techno 293 · iQFOiL</small></div>
+    </div>
+    <h1>Todo lo que el equipo necesita <span>saber</span></h1>
+    <p class="lede">Reglamentos, trámites, calendario y guías del equipo de Windsurf del CRL, resumidos en artículos cortos. Busca una palabra o elige tu perfil; cada artículo enlaza al documento original.</p>
+  </div>
+</header>
+<svg class="wave" viewBox="0 0 1440 44" preserveAspectRatio="none" aria-hidden="true"><path d="M0 22c120 18 240 26 360 22s240-26 360-22 240 26 360 22 240-26 360-22v22H0z"/></svg>
+
+<div class="searchbar">
+  <div class="wrap">
+    <label class="search" for="q">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="q" type="search" placeholder="Buscar: Paracas, alquiler, permiso notarial, bus, sanciones…" autocomplete="off">
+      <button type="button" id="clear" aria-label="Limpiar búsqueda" hidden>✕</button>
+    </label>
+    <div class="filters" role="group" aria-label="Filtrar por perfil">
+      <span class="lbl">Soy</span>
+      <button class="chip" data-aud="dep" aria-pressed="false" type="button">Deportista</button>
+      <button class="chip" data-aud="pad" aria-pressed="false" type="button">Padre / madre</button>
+      <button class="chip" data-aud="ent" aria-pressed="false" type="button">Entrenador / Comisión</button>
+    </div>
+  </div>
+</div>
+
+<section class="classes wrap" aria-label="Las clases">
+  <div class="grid">
+    <article class="classcard">
+      <div class="ph" style="background-image:url(img/techno-per23.jpg)"></div><div class="sh"></div>
+      <div class="in">
+        <img class="logo" src="img/logo-t293.png" alt="Techno 293">
+        <h3>Techno 293</h3>
+        <p>La clase de formación y de los Juegos Olímpicos de la Juventud. Tabla monotipo, velas de 6.8 y 7.8 m². Es donde empieza el equipo después de la academia.</p>
+        <div class="row"><a class="btn" href="#clases">Ver la clase</a><a class="btn ghost" href="https://www.youtube.com/watch?v=gnWeqcg1XB0" target="_blank" rel="noopener">Video ▶</a></div>
+      </div>
+    </article>
+    <article class="classcard">
+      <div class="ph" style="background-image:url(img/iqfoil-per35.jpg)"></div><div class="sh"></div>
+      <div class="in">
+        <img class="logo dark" src="img/logo-iqfoil.png" alt="iQFOiL">
+        <h3>iQFOiL</h3>
+        <p>La clase olímpica. Tabla con foil, velas de 7.0 a 8.0 m² y categorías Sub‑15 a Senior. Con ella el equipo compite en Sudamericanos, Mundiales y el circuito olímpico.</p>
+        <div class="row"><a class="btn" href="#clases">Ver la clase</a><a class="btn ghost" href="https://www.youtube.com/watch?v=BKMy5BjWXHw" target="_blank" rel="noopener">Video ▶</a></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<nav class="topics wrap" aria-label="Temas">
+  <h2>Temas</h2>
+  <ul class="tiles" id="toc"></ul>
+  <div class="status" id="status" aria-live="polite" style="padding-top:8px"></div>
+</nav>
+
+<main><div class="wrap narrow" id="main"></div></main>
+
+<footer>
+  <div class="wrap">
+    <div class="brand"><img src="img/logo-crl.png" alt=""><div class="t">Club de Regatas Lima<small>Equipo Windsurf</small></div></div>
+    <p>Esta página resume documentos del equipo. Ante cualquier diferencia, prevalece el documento original enlazado en cada artículo. Fotos: 2.ª Copa Federación Peruana de Vela, Paracas 2026.</p>
+    <p>Página original: <a href="https://sites.google.com/view/crlwindsurf">sites.google.com/view/crlwindsurf</a> · Documentos vigentes al 22 de octubre de 2026.</p>
+  </div>
+</footer>
+
+<script>
+const DOCS = {
+  cal: ["Calendario ACT Windsurf 2026 (Excel)", "https://drive.google.com/file/d/11TN6xUKgfo9pm8WUSRhLhXIEEbFnegU1/view"],
+  dir: ["Directorio Windsurf 2025 (hoja)", "https://docs.google.com/spreadsheets/d/1VqTH2JxB1A51N89IwAGW0bJKLhMVvP5XLa5hDeo641Y"],
+  regpar: ["Reglamento Casa de Paracas (PDF)", "https://drive.google.com/file/d/1TULptm9Tph3sm4bHWWdeOdjg0U0l01Tc/view"],
+  notarial: ["Modelo de permiso notarial (Word)", "https://drive.google.com/file/d/1J3GNgs6j65_MfWym96JOyHaZblTWlCFX/view"],
+  ficha: ["Ficha de Datos 2026 (formulario)", "https://docs.google.com/forms/d/e/1FAIpQLSdOPJLW4HMMu3vR_HyaXqT0R2tmMARenX9RvRA2hMbSuUKDIg/viewform"],
+  carta: ["Carta compromiso de conducta Paracas", "https://drive.google.com/file/d/17xUhtkReP3SYHzmv8QIYUJ4cX-2JhGj5/view"],
+  regnaut: ["Reglamento de Deportes Náuticos CRL, jul. 2024 (PDF)", "https://drive.google.com/file/d/1BtnsAFnxHEMDhWaOUOaU446utt1FtT4D/view"],
+  crit: ["Criterios de asignación de equipos, Rev3 (Word)", "https://drive.google.com/file/d/1T7_mlDx246B4hxMgP-E4Jub8O3VEv7wN/view"],
+  term: ["Términos y condiciones de uso de equipos (Doc)", "https://docs.google.com/document/d/1k6ViVj4HIViODC3Bhq7yFx48Gjgj8gHciMSs2sCKTrg"],
+  aptavo: ["APTAVO, presentación mayo 2023 (PDF)", "https://drive.google.com/file/d/16ozOQH1MqJQOYO0TBpSFNlQOtaPxcd2o/view"],
+  proto: ["Protocolo de apoyo y seguridad Paracas v3 (Word)", "https://drive.google.com/file/d/1eA6ExefEhVy0Z5HmQefn8bfiPGiaoCfZ/view"],
+  crono: ["Cronograma padres responsables Paracas 2026 (Excel)", "https://drive.google.com/file/d/1zGY4gF3xwLojJfGTBrTPfNUUCZcLMTDq/view"],
+  ytiq: ["Video: This is iQFOiL (YouTube)", "https://www.youtube.com/watch?v=BKMy5BjWXHw"],
+  yttech: ["Video: What is BIC Techno 293 OD (YouTube)", "https://www.youtube.com/watch?v=gnWeqcg1XB0"],
+};
+const AUD = {dep:"Deportistas", pad:"Padres", ent:"Entrenadores / Comisión"};
+
+const TOPICS = [
+{ id:"empezar", title:"Para empezar", intro:"Lo primero que necesita un miembro nuevo o su familia.", items:[
+ { t:"Checklist para un deportista nuevo", aud:["dep","pad"], sum:"Los cinco trámites y documentos que debe tener listos cada integrante del equipo.",
+   body:`<ul>
+   <li><b>Ficha de datos 2026</b>: llenar el formulario con datos del deportista y contactos de emergencia.</li>
+   <li><b>Permiso notarial</b> (menores de edad): acta notarial de autorización de viaje a Paracas, vigente para todo el año.</li>
+   <li><b>Carta de compromiso de conducta</b> de la Casa de Paracas, firmada por navegante y padres.</li>
+   <li><b>Contrato de alquiler de equipo</b> (Anexo 1 de los Términos y Condiciones), si el club le asigna tabla o vela.</li>
+   <li><b>Afiliación a APTAVO</b> si va a competir en campeonatos nacionales o internacionales (número de vela PER).</li>
+   </ul>
+   <p class="note">Revisa también el calendario del año y el reglamento de la Casa de Paracas antes del primer viaje.</p>`, src:["ficha","notarial","carta","term","aptavo"] },
+ { t:"¿Quién es quién? Comisión, entrenadores y padres responsables", aud:["dep","pad","ent"], sum:"Cómo se organiza el equipo y a quién acudir para cada cosa.",
+   body:`<div class="kv">
+   <b>Director Náutico</b><span>Dirige todas las actividades náuticas del club y aprueba el calendario de la Casa de Paracas.</span>
+   <b>Comisión de Windsurf</b><span>Coordinadora y miembros designados por el Consejo Directivo. Convoca entrenamientos, administra cuotas y menú de Paracas, envía contratos de equipos, califica faltas y sanciones. Es el canal para pedidos de equipos para campeonatos.</span>
+   <b>Entrenadores</b><span>Definen zona y horario de entrenamiento en el agua, asignan y evalúan equipos, presentan reporte mensual de asistencia y avances.</span>
+   <b>Padres responsables</b><span>Pareja de padres que acompaña cada viaje a Paracas en representación del coordinador. Autorizan salidas, deciden la hora de regreso y reportan incidentes a la Comisión.</span>
+   <b>Padres colaboradores</b><span>Pareja de apoyo cuando el grupo supera los 20 deportistas.</span>
+   <b>Administrador de la sede Paracas</b><span>Responsable de la casa y del control de zarpes y arribos en la filial.</span>
+   </div>
+   <p>Los nombres y teléfonos de la Comisión y del administrador están en el Protocolo de seguridad y en el Directorio del equipo.</p>`, src:["proto","dir","regpar"] },
+]},
+{ id:"calendario", title:"Calendario 2026", intro:"Entrenamientos, campeonatos y clínicas del año. El Excel tiene pestañas separadas para Equipo, Pre‑equipo, Nacionales e Internacionales.", items:[
+ { t:"Ritmo del año: dónde y cuándo se entrena", aud:["dep","pad"], sum:"Verano en Paracas y Chorrillos; de marzo a diciembre, fines de semana en Paracas, Chorrillos o La Punta.",
+   body:`<ul>
+   <li><b>Enero y febrero</b>: entrenamientos de lunes a jueves/viernes (Chorrillos y Paracas), clínicas con entrenador invitado y Academia de Verano para el Pre‑equipo.</li>
+   <li><b>Marzo a diciembre</b>: entrenamientos de fin de semana. Entre semana, entrenamiento después del colegio de 4:30 a 6:30 pm en Chorrillos (martes/jueves o miércoles/jueves según grupo).</li>
+   <li><b>Paracas</b>: fin de semana completo, de viernes 5 pm a domingo 8 pm. En julio y parte de agosto no hay espacio en la casa y se entrena en Chorrillos.</li>
+   <li><b>Descansos</b>: Semana Santa, Día de la Madre, Día del Padre, elecciones y Navidad.</li>
+   <li><b>Talleres obligatorios</b> de psicología del deporte en febrero (uno para padres, otro para deportistas).</li>
+   <li><b>Pre‑equipo</b>: calendario propio hasta agosto; desde septiembre se unifica con el equipo.</li>
+   </ul>`, src:["cal"] },
+ { t:"Campeonatos nacionales 2026", aud:["dep","pad","ent"], sum:"Cuatro nacionales rankeables más el Sudamericano en Paracas.",
+   body:`<div class="tbl"><table><thead><tr><th>Fecha</th><th>Lugar</th><th>Evento</th><th>Nota</th></tr></thead><tbody>
+   <tr><td>21–22 y 28–29 mar</td><td>Chorrillos</td><td>Mes de la Vela, Nacional #1</td><td>T293 e iQFOiL</td></tr>
+   <tr><td>23–26 abr</td><td>Paracas</td><td>Nacional #2</td><td>Equipo</td></tr>
+   <tr><td>12–16 ago</td><td>Paracas</td><td>Sudamericano de Windsurf (iQFOiL y Techno)</td><td>Abierto + clasificatorio ODESUR</td></tr>
+   <tr><td>26–27 sep</td><td>Paracas</td><td>Nacional #3</td><td>Clasificatorio Mundial Juvenil Vilamoura</td></tr>
+   <tr><td>28–29 nov</td><td>La Punta</td><td>Nacional #4</td><td>Pre‑equipo y Equipo</td></tr>
+   </tbody></table></div>
+   <p>Además: Copa Chato Ruiz Vier (slalom) el 29–30 de agosto y HALLOWIND el 24–25 de octubre en Paracas.</p>`, src:["cal"] },
+ { t:"Campeonatos internacionales y clínicas 2026", aud:["dep","pad","ent"], sum:"Viajes del equipo iQFOiL y Techno 293, y clínicas con entrenadores invitados.",
+   body:`<div class="tbl"><table><thead><tr><th>Fecha</th><th>Lugar</th><th>Evento</th><th>Grupo</th></tr></thead><tbody>
+   <tr><td>7–13 mar</td><td>Cádiz, España</td><td>iQFOiL Games #1, Pto. Sherry</td><td>Equipo iQFOiL</td></tr>
+   <tr><td>3–10 abr</td><td>Foça, Turquía</td><td>Mundial T293</td><td>Intermedios</td></tr>
+   <tr><td>3–10 jul</td><td>Girona, España</td><td>iQFOiL Youth &amp; Junior Worlds</td><td>Int. y Ava.</td></tr>
+   <tr><td>18–25 jul</td><td>Sopot, Polonia</td><td>Europeo T293</td><td>Intermedios</td></tr>
+   <tr><td>10–20 sep</td><td>Santa Fe, Argentina</td><td>Juegos Suramericanos ODESUR</td><td>Clasificados</td></tr>
+   <tr><td>26 sep–3 oct</td><td>Puck, Polonia</td><td>Mundial Sub‑23 iQFOiL</td><td>iQFOiL</td></tr>
+   <tr><td>24–31 oct</td><td>Varkiza, Grecia</td><td>Europeo Juvenil iQFOiL</td><td>Int. y Ava.</td></tr>
+   <tr><td>31 oct–13 nov</td><td>Dakar, Senegal</td><td>Juegos Olímpicos de la Juventud T293</td><td>Clasificados</td></tr>
+   <tr><td>19–22 nov</td><td>Porto Alegre, Brasil</td><td>Sudamericano Juvenil iQFOiL</td><td>iQFOiL</td></tr>
+   <tr><td>11–19 dic</td><td>Vilamoura, Portugal</td><td>Youth Sailing World Championships</td><td>Sub‑19 clasificados</td></tr>
+   </tbody></table></div>
+   <p><b>Clínicas</b>: febrero con Martín Reuteman (ARG) en Paracas y Chorrillos; mayo y julio–agosto con Martín Berardo (ARG) en Paracas, separadas para iQFOiL y T293; clínica de olas en Negritos (Piura) por confirmar.</p>`, src:["cal"] },
+]},
+{ id:"paracas", title:"Casa de Paracas", intro:"Reglas de convivencia, horarios, viajes y cuotas en la sede de Paracas. Reglamento de la Comisión (2016) y reglas específicas vigentes.", items:[
+ { t:"Horarios de bus, salidas y regreso", aud:["dep","pad"], sum:"Salida de Lima 7:30 am (7:00 am si hay competencia); regreso ideal a las 6:00 pm.",
+   body:`<ul>
+   <li><b>Salida de Lima</b>: 7:30 am con entrenamiento, 7:00 am con competencia. Llegar 15 minutos antes.</li>
+   <li><b>Regreso a Lima</b>: hora ideal 6:00 pm desde Paracas. La decisión final la toman los padres responsables, que publican la hora de salida y la hora estimada de llegada al club.</li>
+   <li>Los menores que van en el bus regresan en el bus, salvo indicación expresa de sus padres.</li>
+   <li>El bus no se desvía para recoger o dejar pasajeros; cualquier cambio de ruta se coordina a través de la Comisión con el Departamento de Transportes del club.</li>
+   <li>Antes de partir, el padre responsable verifica que estén todos los navegantes (también en las paradas).</li>
+   <li>Se recomienda que un auto particular acompañe al bus a la ida y a la vuelta.</li>
+   </ul>`, src:["regpar","proto"] },
+ { t:"Permisos para salir de la casa y hora de retorno", aud:["dep","pad"], sum:"Toda salida se pide a los padres responsables. Menores hasta las 9:00 pm; mayores hasta las 11:00 pm. Nadie entra ni sale después de las 10:00 pm.",
+   body:`<ul>
+   <li>Para salir de la casa se pide autorización a los padres responsables (y a los propios padres y entrenadores), indicando a dónde, con quién y respetando horarios.</li>
+   <li><b>Menores de edad</b>: retorno hasta las 9:00 pm. <b>Mayores</b>: hasta las 11:00 pm (Reglamento 2016).</li>
+   <li>Reglas específicas vigentes: a las 11:00 pm todos en sus habitaciones; la cocina cierra a las 9:00 pm (lo que se usa, se lava).</li>
+   <li>Protocolo v3: nadie entra ni sale de la sede después de las 10:00 pm. Las salidas de menores de 16 años se coordinan con sus padres; los mayores de 16 pueden salir salvo indicación en contra de sus padres.</li>
+   <li>Los permisos pueden negarse si se incumplieron normas de la casa. Si un padre no quiere que su hijo salga, debe avisar con anticipación a entrenadores, Comisión y padres responsables.</li>
+   </ul>
+   <p class="note">Hay tres documentos con horarios ligeramente distintos. En la práctica mandan los padres responsables del fin de semana; ante la duda, pregúntales.</p>`, src:["regpar","carta","proto"] },
+ { t:"Habitaciones y convivencia", aud:["dep","pad"], sum:"Habitaciones separadas por sexo, sin excepciones. Dormitorio principal para los padres responsables.",
+   body:`<ul>
+   <li>Las chicas se ubican juntas en una o dos habitaciones; no hay habitaciones mixtas y nadie entra a las habitaciones del otro sexo.</li>
+   <li>Los varones eligen libremente el resto de habitaciones; los padres responsables solo intervienen en caso de conflicto.</li>
+   <li>Se duerme en la habitación asignada, no en sala, terraza u otros ambientes.</li>
+   <li>Trato cortés al personal de la casa y a los padres responsables; seguir sus instrucciones.</li>
+   <li>Quienes no se alojan en la casa solo usan servicios básicos y se retiran a más tardar a las 10:00 pm.</li>
+   </ul>`, src:["regpar","carta"] },
+ { t:"Cuotas de alojamiento y alimentación", aud:["pad","dep"], sum:"Todos los que se hospedan pagan la cuota del fin de semana; quienes traen su comida pagan 50 %.",
+   body:`<ul>
+   <li>La Comisión comunica el entrenamiento confirmado; el deportista confirma su participación depositando la cuota definida.</li>
+   <li>La cuota cubre alimentación, limpieza y servicios. Exonerados: la pareja de padres responsables, los padres de apoyo y los entrenadores con grupo asignado.</li>
+   <li>Dieta especial o comida propia: 50 % de la cuota. Consumo parcial del menú (veganos, vegetarianos, dieta especial): 75 %.</li>
+   <li>Invitados de otras clases pagan la cuota completa y no usan la logística de entrenamiento del equipo.</li>
+   <li>Quien quiera ir a navegar un fin de semana sin entrenamiento programado espera la confirmación de espacio el viernes y paga la cuota de inmediato (sin recargo por pago tardío). Si es menor, el socio responsable autoriza por escrito que navegue sin supervisión directa.</li>
+   </ul>`, src:["regpar"] },
+ { t:"Alcohol, disciplina y sanciones", aud:["dep","pad","ent"], sum:"Alcohol prohibido para todos, incluidos adultos. Faltas leves, moderadas, graves y muy graves.",
+   body:`<ul>
+   <li>Prohibida la ingesta o tenencia de bebidas alcohólicas en la casa, para navegantes y entrenadores, mayores y menores. El Protocolo lo extiende a los padres responsables.</li>
+   <li>Los padres responsables identifican y reportan actos de indisciplina a la Comisión, que califica la falta junto con los entrenadores.</li>
+   </ul>
+   <div class="kv">
+   <b>Leve</b><span>Llamada de atención.</span>
+   <b>Moderada o reiterada</b><span>Suspensión del siguiente Paracas.</span>
+   <b>Grave</b><span>Suspensión de los entrenamientos en Paracas (Comisión + Director Náutico).</span>
+   <b>Muy grave</b><span>Expulsión del equipo (Comisión + Director Náutico).</span>
+   </div>
+   <p>Si el hecho lo amerita, se llama a los padres para que recojan al deportista.</p>`, src:["regpar","carta","proto"] },
+ { t:"Entrenamiento en el agua: zona, horarios y traslados", aud:["dep","ent"], sum:"Se entrena solo en la zona que definen los entrenadores; otras playas de la reserva requieren convocatoria previa.",
+   body:`<ul>
+   <li>Los entrenadores definen la zona de entrenamiento; no se puede entrenar en otra playa por cuenta propia.</li>
+   <li>El horario físico y en el agua lo fijan el entrenador físico y el juez de mar, en coordinación con los entrenadores.</li>
+   <li>Traslados a otras playas dentro de la reserva se anuncian en la convocatoria; si no estaban previstos, requieren autorización de los padres responsables y presencia de un entrenador o padre encargado.</li>
+   <li>Al navegar sin entrenamiento programado se recomienda llevar celular con protección de agua para comunicarse con el apoyo náutico.</li>
+   <li>Las pertenencias deben quedar guardadas y listas después del desayuno del domingo, antes de armar equipos.</li>
+   </ul>`, src:["regpar"] },
+ { t:"Calendario de padres responsables 2026", aud:["pad","ent"], sum:"Cada viaje a Paracas tiene una pareja de padres responsables asignada en un cronograma anual.",
+   body:`<p>El cronograma lista, por fecha y motivo (entrenamiento, clínica, selectivo, campeonato), la pareja de padres responsables y sus celulares. Hay fechas aún sin asignar; coordina con la Comisión para tomar un fin de semana.</p>
+   <p>Funciones del padre responsable durante el viaje: estar presente y disponible en la casa, pasar lista en el bus, verificar que a las 11 pm todos estén en sus habitaciones, supervisar la separación de habitaciones, coordinar cualquier contingencia con la Comisión y entrenadores, y reportar incidentes. Su rol es de apoyo; no sustituye a los entrenadores.</p>`, src:["crono","proto","regpar"] },
+]},
+{ id:"seguridad", title:"Seguridad y emergencias", intro:"Protocolo de apoyo y seguridad en Paracas (v3) y normas de navegación del club.", items:[
+ { t:"Qué hacer ante un accidente o enfermedad en Paracas", aud:["pad","ent","dep"], sum:"Heridas menores se atienden en la casa; heridas graves van a SAMU 106 o al centro médico más cercano.",
+   body:`<h4>Heridas menores</h4>
+   <ul><li>Lavar con agua y jabón, desinfectar y cubrir.</li><li>Informar a los padres y monitorear.</li></ul>
+   <h4>Heridas graves</h4>
+   <ul><li>Mantener la calma. Llamar a <b>SAMU 106</b> o trasladar al centro médico más cercano.</li><li>Contactar a los padres y al seguro del menor. Registrar hora y acciones.</li></ul>
+   <h4>Síntomas de enfermedad</h4>
+   <ul><li>Medir temperatura, hidratar, evaluar traslado a clínica, informar a los padres y consultar al seguro.</li></ul>
+   <h4>Centros de salud cercanos</h4>
+   <div class="tbl"><table><thead><tr><th>Centro</th><th>Dirección</th><th>Teléfono</th></tr></thead><tbody>
+   <tr><td>Clínica San Gabriel Paracas (privada)</td><td>Av. Libertadores 198</td><td>+51 56 535550</td></tr>
+   <tr><td>Hospital San Juan de Dios, Pisco (público)</td><td>Av. Las Américas s/n</td><td>+51 56 531100</td></tr>
+   <tr><td>Clínica Angloamericana, Ica (privada)</td><td>Av. San Martín 815</td><td>+51 56 222221</td></tr>
+   </tbody></table></div>
+   <h4>Centrales de emergencia de seguros</h4>
+   <div class="kv"><b>Rímac</b><span>411‑1111</span><b>Pacífico</b><span>513‑5000</span><b>La Positiva</b><span>211‑0211</span><b>Mapfre</b><span>213‑3333</span></div>
+   <p>El protocolo original incluye además contactos de emergencia por deportista, teléfonos de la Comisión, del administrador de la sede y taxis seguros. El padre responsable debe llevarlo impreso junto con un botiquín y un teléfono operativo, y cada familia debe informar antes del viaje alergias, tratamientos, restricciones y póliza de seguro.</p>`, src:["proto"] },
+ { t:"Reglas de seguridad para navegar (todas las sedes)", aud:["dep","ent","pad"], sum:"Chaleco siempre, saber nadar, autorización escrita de los padres y registro de zarpe y arribo.",
+   body:`<ul>
+   <li>Chaleco salvavidas puesto en todo momento. El navegante debe saber nadar.</li>
+   <li>Menores de edad: autorización por escrito de los padres para navegar.</li>
+   <li>Entrenadores y deportistas registran salida y regreso en el libro de zarpes y arribos.</li>
+   <li>Los equipos del club navegan en grupo bajo control del entrenador, que acompaña en bote de apoyo: un entrenador/bote por cada 10 deportistas en el agua.</li>
+   <li>El entrenador sale con chaleco y radio cargada, confirma con la base al abordar, verifica el estado del bote y adapta las distancias a la capacidad de los navegantes.</li>
+   <li>Banderas en el mástil de Chorrillos: <b>verde</b> salida franca; <b>roja con punto negro</b> mar o viento riesgoso, salir solo con precauciones; <b>roja</b> prohibida la salida de cualquier embarcación, tablas incluidas.</li>
+   <li>Si se lanza una bengala roja desde el muelle, todas las embarcaciones vuelven al club de inmediato.</li>
+   </ul>`, src:["regnaut"] },
+]},
+{ id:"equipos", title:"Equipos del club: asignación y alquiler", intro:"Qué equipos presta el club, a quién, por cuánto tiempo y a qué costo. Criterios Rev3 y Términos y Condiciones.", items:[
+ { t:"¿Cuánto cuesta alquilar equipo del club?", aud:["pad","dep"], sum:"Tabla T293 o Start 30 soles al mes; vela de aprendizaje 40 soles; equipo iQFOiL completo 140 soles.",
+   body:`<div class="kv">
+   <b>Tabla T293 o Start</b><span>S/ 30 al mes (Pre‑selección)</span>
+   <b>Vela (rig) de aprendizaje</b><span>S/ 40 al mes</span>
+   <b>Equipo iQFOiL completo</b><span>S/ 140 al mes (tabla nueva iQFOiL + foil de aluminio; se alquila completo, tabla con foil)</span>
+   </div>
+   <p>El cargo va al estado de cuenta mensual del socio. Al devolver el equipo se paga una cuota de mantenimiento más los costos de reparación o pérdida si los hubiera. El contrato modelo (Anexo 1 de los Términos) menciona US$ 30 mensuales por tabla y accesorios; los montos vigentes son los de los Criterios Rev3.</p>
+   <p>Un préstamo de equipo para un campeonato internacional también tiene costo y se pide a la Comisión.</p>`, src:["crit","term"] },
+ { t:"Quién recibe equipo y por cuánto tiempo", aud:["dep","pad","ent"], sum:"Prioridad a los más nuevos; mínimo 75 % de asistencia; tabla por 2 años y vela por 1.",
+   body:`<ul>
+   <li><b>Orden de prioridad</b>: Academia antes que Pre‑selección; Pre‑selección antes que Equipo; dentro del equipo, quien ingresó hace menos tiempo.</li>
+   <li><b>Asistencia</b>: mínimo 75 % a los entrenamientos físicos y en el agua. Dentro de una misma generación, decide el porcentaje de asistencia.</li>
+   <li><b>Formación inicial</b> (tablas Techno y velas Chinook): se asigna a partir del tercer mes en el equipo; la Pre‑selección la usa hasta el 15 de diciembre y la devuelve para reasignación.</li>
+   <li><b>Formación iQFOiL</b>: primero tablas de foil adaptadas (prioridad a la última preselección); luego tabla iQFOiL y foil por 8 meses.</li>
+   <li><b>Plazos</b>: tabla por 2 años (año 1 Techno/Start de marzo al 15 de diciembre; año 2 foil de enero a marzo); vela por 1 año (marzo a marzo). A partir del tercer año se espera que el navegante tenga equipo propio o lo separe vía FPV/APTAVO.</li>
+   <li><b>Excepción</b>: un deportista de alto nivel que no cumpla los criterios puede solicitar equipo a la Comisión para un evento relevante (Sudamericano, Mundial olímpico o juvenil).</li>
+   </ul>`, src:["crit"] },
+ { t:"Qué incluye el equipo y qué debe comprar cada navegante", aud:["dep","pad"], sum:"El club da rig (vela, mástil, botavara, extensión, bolso) y tabla (quilla, orza, straps). El resto lo compra la familia.",
+   body:`<p>Accesorios que el navegante va adquiriendo según indique su entrenador, en orden de prioridad y con precios referenciales: pie de mástil (~US$ 80), chaleco (US$ 30–100), arnés (US$ 80–120), pitas de arnés (US$ 80–100), grip para la tabla (~US$ 15), straps si hacen falta (~US$ 15) y sistemas si hacen falta (~US$ 200).</p>
+   <p>Equipos que prioriza el club: velas de tela de 2 a 4.5 m² y tablas Start de 285 y 245 L para academia; velas de monofilm de 4.7 a 7.0 m² y tablas de planeo de 230 L (o Techno) para pre‑selección; tablas de aprendizaje de foil; tablas iQFOiL.</p>`, src:["term","crit"] },
+ { t:"Cuidado, daños y reparaciones", aud:["dep","pad"], sum:"Cada navegante responde por su equipo: daño mayor se reemplaza, daño menor se repara.",
+   body:`<div class="tbl"><table><thead><tr><th>Pieza</th><th>Daño mayor (reemplazo)</th><th>Daño menor (reparación)</th></tr></thead><tbody>
+   <tr><td>Vela</td><td>Hueco mayor a 15 cm que llega a costuras</td><td>Hueco menor a 15 cm sin llegar a costuras</td></tr>
+   <tr><td>Mástil</td><td>Partido</td><td>Doblado por dejarlo armado</td></tr>
+   <tr><td>Botavara</td><td>Partida</td><td>Grip despegado por dejarla al sol</td></tr>
+   <tr><td>Extensión</td><td>Partida</td><td>Salinizada</td></tr>
+   <tr><td>Tabla</td><td>Partida o hinchada (infiltración)</td><td>Quiñes</td></tr>
+   <tr><td>Quilla</td><td>Partida</td><td>Tambor robado o quiñe</td></tr>
+   <tr><td>Orza</td><td>Partida</td><td>Rayaduras</td></tr>
+   </tbody></table></div>
+   <p>El entrenador o head coach decide si la pieza se repone nueva o de segunda. Los equipos alquilados se usan para entrenar y competir; fuera de los entrenamientos ordinarios, con permiso del coordinador; a campeonatos internacionales, con aviso previo a la Comisión y firmando la guía de salida. Dos veces al año se revisan todos los equipos asignados.</p>`, src:["term"] },
+ { t:"Proceso de asignación y devolución", aud:["dep","pad","ent"], sum:"Asigna el entrenador, firma el padre, registra el Departamento Náutico. Para devolver, inspección y arreglos primero.",
+   body:`<h4>Asignación</h4>
+   <ul><li>El entrenador asigna el equipo y registra códigos y estado (Anexo 2, formato de evaluación).</li><li>La Comisión envía el contrato (Anexo 1) para firma de los padres.</li><li>El Departamento Náutico recibe el contrato y entra en vigencia; el alquiler se carga al recibo mensual.</li></ul>
+   <h4>Devolución</h4>
+   <ul><li>El navegante avisa al entrenador.</li><li>El entrenador inspecciona y emite informe de arreglos o sustituciones.</li><li>El navegante repara y presenta el equipo a nueva evaluación.</li><li>Cumplidos los criterios, se descarga el alquiler al socio.</li></ul>
+   <p>La asignación es por 1 año si el deportista cumple con asistencia y rendimiento; de lo contrario el equipo puede retirarse en cualquier momento.</p>`, src:["term","crit"] },
+]},
+{ id:"tramites", title:"Trámites y formularios", intro:"Documentos que se llenan o firman una vez al año.", items:[
+ { t:"Ficha de datos 2026", aud:["pad","dep"], sum:"Formulario de Google con los datos del deportista y sus contactos de emergencia. Obligatorio cada año.",
+   body:`<p>La lista de confirmados y los datos de la ficha son la base para transporte, alimentación, alojamiento y el archivo de teléfonos de emergencia que viaja en cada entrenamiento.</p>`, src:["ficha"] },
+ { t:"Permiso notarial de viaje para menores", aud:["pad"], sum:"Acta notarial que autoriza al menor a viajar a Paracas, Pisco e Ica con la delegación de Windsurf del CRL. Se hace una vez por año.",
+   body:`<ul>
+   <li>Documento: <b>Acta notarial de autorización para viaje de menores al interior del país</b> (D. Leg. 1049 y Ley 27337).</li>
+   <li>Datos a completar en el modelo: nombre y DNI del padre o madre que firma, domicilio, nombre, DNI y edad del menor.</li>
+   <li>Destino: Paracas – Pisco – Ica, ida y vuelta, vía terrestre. Observación: "viaja con la delegación de Windsurf del Club Regatas Lima".</li>
+   <li>Fecha de viaje: conviene cubrir todo el año (por ejemplo, de enero a enero) para no repetir el trámite en cada viaje.</li>
+   <li>Se firma ante notario; el modelo que da el equipo sirve de guía para la notaría.</li>
+   </ul>`, src:["notarial"] },
+ { t:"Carta de compromiso de conducta (Casa de Paracas)", aud:["dep","pad"], sum:"Reglas específicas de la casa que firman navegante y padres: horarios, respeto al personal y permisos de salida.",
+   body:`<p>Resume tres puntos: horarios (habitaciones a las 11 pm, cocina cierra a las 9 pm), respeto al personal y a los padres responsables (habitaciones separadas, dormir en la habitación asignada) y permisos de salida (se piden a padres, padres responsables y entrenadores; pueden negarse). El incumplimiento se sanciona como falta leve, media o grave según decida la Comisión con los entrenadores.</p>`, src:["carta"] },
+ { t:"Contrato de alquiler de equipo (Anexo 1)", aud:["pad"], sum:"Carta al Director Náutico solicitando la asignación de tabla y aparejos para el hijo o hija, con autorización de cargo mensual.",
+   body:`<p>Incluye número y marca de tabla, aparejos recibidos (quilla, orza, pie, straps, tapón, funda) y el compromiso de cuidar, reparar y devolver completo. Se firma con nombre y número de carnet del asociado.</p>`, src:["term"] },
+ { t:"Directorio del equipo", aud:["dep","pad","ent"], sum:"Hoja de cálculo con los contactos de los integrantes del equipo (versión 2025).",
+   body:`<p>Contiene datos personales; está restringida a quienes tienen acceso en Drive. Si no puedes abrirla, pide acceso a la Comisión.</p>`, src:["dir"] },
+]},
+{ id:"club", title:"Reglamento Náutico del CRL", intro:"Lo que aplica al equipo de Windsurf dentro del Reglamento del Departamento de Deportes Náuticos (julio 2024).", items:[
+ { t:"Lo esencial para windsurfistas", aud:["dep","pad","ent"], sum:"Año náutico de abril a marzo, zonas de navegación en Chorrillos, salida por playa y guardado de tablas.",
+   body:`<ul>
+   <li><b>Año náutico</b>: del 1 de abril al 31 de marzo.</li>
+   <li><b>Zonas en la bahía de Chorrillos</b>: zona 3 para remo y veleros (máx. 2 nudos); zona 4 exclusiva para bañistas; zona 5 entrada y salida de embarcaciones sin motor. Ninguna embarcación entra a la zona de bañistas.</li>
+   <li>La salida y entrada por playa de tablas y veleros menores, y su traslado desde el depósito, la hace el asociado; si necesita ayuda, la pide a los náuticos.</li>
+   <li>Las asignaciones de material deportivo se hacen mediante acta firmada por el asociado (o por el padre/madre si es hijo de socio) y el alquiler se carga al recibo mensual.</li>
+   <li>Tarifa de estacionamiento de tabla a vela Windsurf en el club: categoría B, 20 % de la cuota de socio activo mayor al mes.</li>
+   <li>Contacto del Departamento Náutico: nautico@clubregatas.org.pe</li>
+   </ul>`, src:["regnaut"] },
+ { t:"Autoridades, sanciones y banderas", aud:["ent","pad"], sum:"Director Náutico, comisiones, contramaestre en Chorrillos y administrador en Paracas.",
+   body:`<p>El Director Náutico dirige las actividades, aprueba calendarios y puede sancionar el uso de servicios o la salida al mar por faltas de seguridad o cortesía marina. Las comisiones (como la de Windsurf) colaboran con él y pueden decidir en su ausencia. El contramaestre tiene autoridad sobre el personal náutico en Chorrillos; en Paracas, el administrador de la filial. Las faltas al Estatuto pasan al Consejo Directivo o a la Junta Calificadora y de Disciplina.</p>
+   <p>Insignias: presidente (bandera azul con ancla y 13 estrellas), Director Náutico (roja con ancla y 4 estrellas), comisiones (blanca con ancla azul). Bandera del estado del mar en la cruceta derecha: verde, roja con punto negro o roja.</p>`, src:["regnaut"] },
+]},
+{ id:"clases", title:"Clases, federación y APTAVO", intro:"Las modalidades que se practican y la asociación que gestiona la participación en el circuito olímpico.", items:[
+ { t:"iQFOiL: la clase olímpica", aud:["dep","pad"], sum:"Windsurf con foil, clase olímpica desde París 2024. Categorías Sub‑15, Sub‑17, Sub‑19, Sub‑21 y Senior.",
+   body:`<p>Tabla iQFOiL con foil de aluminio y velas de 7.0 a 8.0 m² según edad y peso. Es la modalidad de los Juegos Olímpicos, Panamericanos y Sudamericanos. El equipo iQFOiL del CRL compite en iQFOiL Games, Mundiales juveniles y Sudamericanos.</p>`, src:["ytiq","aptavo"] },
+ { t:"Techno 293: la clase de formación", aud:["dep","pad"], sum:"Tabla monotipo de iniciación y competencia juvenil, con velas de 6.8 y 7.8 m². Clase de los Juegos Olímpicos de la Juventud.",
+   body:`<p>Es la primera tabla del equipo después de la academia (tablas Start). Categorías Sub‑15 y Sub‑17. El paso a foil se hace después de uno o dos años en Techno, según los criterios de asignación.</p>`, src:["yttech","crit"] },
+ { t:"APTAVO: qué es y por qué afiliarse", aud:["dep","pad"], sum:"Asociación Peruana de Tabla a Vela Olímpica. Da el número de vela PER, el ranking nacional y el acceso a apoyo del IPD vía la Federación de Vela.",
+   body:`<p>Nace en 2014 para que deportistas peruanos participen en el circuito olímpico de windsurf. Es intermediaria con la FDNPV (Federación Deportiva Nacional Peruana de Vela), que a su vez lo es con el IPD.</p>
+   <div class="kv">
+   <b>Competitivo Nacional</b><span>Campeonatos y clínicas nacionales, número de vela PER‑XX, constancias y permisos ante la FDNPV, tarifa preferencial en nacionales, ranking anual. Cuota 2023: S/ 180 al año.</span>
+   <b>Competitivo Internacional</b><span>Todo lo anterior más gestión de resoluciones de viaje y apoyo económico del IPD, prioridad en clínicas de alto rendimiento y beneficios del IPD (nutrición, medicina deportiva). Cuota 2023: S/ 380 al año.</span>
+   </div>
+   <p>Las cuotas y el directorio son de la presentación de 2023; confirma los montos vigentes con la Comisión.</p>`, src:["aptavo"] },
+]},
+];
+
+
+const ICONS = {
+  empezar:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h10M4 12h16M4 18h12"/><circle cx="19" cy="6" r="2"/></svg>',
+  calendario:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>',
+  paracas:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-5h4v5"/></svg>',
+  seguridad:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M12 3v5M12 16v5M3 12h5M16 12h5"/></svg>',
+  equipos:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 3c0 6-5 10-8 12"/><path d="M13 3c5 3 8 8 8 12H5"/><path d="M3 19c3-2 6-2 9 0s6 2 9 0"/></svg>',
+  tramites:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M10 13h6M10 17h6"/></svg>',
+  club:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2"/><path d="M12 7v14M5 12H3c0 5 4 9 9 9s9-4 9-9h-2M8 12h8"/></svg>',
+  clases:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h9a3 3 0 1 0-3-3"/><path d="M4 17h12a3 3 0 1 1-3 3"/><path d="M4 7h5a2 2 0 1 0-2-2"/></svg>'
+};
+const BANNERS = {
+  paracas:{img:'img/iqfoil-duo.jpg',t:'Casa de Paracas',s:'La sede de entrenamiento del equipo, a tres horas de Lima.'},
+  equipos:{img:'img/fleet-5.jpg',t:'Equipos del club',s:'Tablas y velas en alquiler para que cada navegante avance de Techno a foil.'},
+  clases:{img:'img/equipo.jpg',t:'Somos el equipo',s:'Equipo y pre‑equipo CRL, Copa Federación Peruana de Vela 2026.'}
+};
+const ICON_LINK = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 3h7v7"/><path d="M21 3 10 14"/><path d="M19 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h5"/></svg>';
+const ICON_CHEV = '<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>';
+
+function render(){
+  const main = document.getElementById('main');
+  const toc = document.getElementById('toc');
+  main.innerHTML = TOPICS.map(tp => {
+    const b = BANNERS[tp.id];
+    const banner = b ? `<div class="banner" aria-hidden="true"><div class="ph" style="background-image:url(${b.img})"></div><div class="sh"></div><div class="cap"><b>${b.t}</b><span>${b.s}</span></div></div>` : '';
+    return `${banner}
+    <section class="topic" id="${tp.id}" data-topic>
+      <div class="head"><div class="ic">${ICONS[tp.id]||''}</div><h2>${tp.title}</h2></div>
+      <p class="intro">${tp.intro}</p>
+      <div class="cards">${tp.items.map((it,i)=>`
+        <details class="card" data-aud="${it.aud.join(' ')}" id="${tp.id}-${i}">
+          <summary>
+            <h3 data-h>${it.t}</h3>
+            <div class="sum" data-h>${it.sum}</div>
+            <div class="tags">${it.aud.map(a=>`<span class="tag ${a}">${AUD[a]}</span>`).join('')}</div>
+            ${ICON_CHEV}
+          </summary>
+          <div class="body" data-h>${it.body}
+            <div class="src">${it.src.map(k=>`<a href="${DOCS[k][1]}" target="_blank" rel="noopener">${ICON_LINK}${DOCS[k][0]}</a>`).join('')}</div>
+          </div>
+        </details>`).join('')}
+      </div>
+    </section>`}).join('');
+  toc.innerHTML = TOPICS.map(tp=>`<li><a class="tile" href="#${tp.id}"><span class="ic">${ICONS[tp.id]||''}</span><b>${tp.title}</b><small>${tp.items.length} artículo${tp.items.length===1?'':'s'}</small></a></li>`).join('');
+  document.querySelectorAll('[data-h]').forEach(el=>{ el.dataset.orig = el.innerHTML; });
+}
+render();
+
+const q = document.getElementById('q'), clearBtn = document.getElementById('clear'), status = document.getElementById('status');
+let aud = null;
+function norm(s){ return s.normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase(); }
+function escapeRe(s){ return s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'); }
+function highlight(html, terms){
+  if(!terms.length) return html;
+  const tpl = document.createElement('template'); tpl.innerHTML = html;
+  const walker = document.createTreeWalker(tpl.content, NodeFilter.SHOW_TEXT);
+  const nodes = []; while(walker.nextNode()) nodes.push(walker.currentNode);
+  const re = new RegExp(terms.map(escapeRe).join('|'), 'g');
+  nodes.forEach(n=>{
+    const text = n.nodeValue, nfd = text.normalize('NFD'), nt = norm(text);
+    const map = []; for(let i=0;i<nfd.length;i++){ if(!/[̀-ͯ]/.test(nfd[i])) map.push(i); }
+    let parts = [], last = 0, m, hit=false; re.lastIndex = 0;
+    while((m = re.exec(nt))){
+      hit = true;
+      const s = map[m.index]; let e = (map[m.index+m[0].length-1] ?? nfd.length-1)+1;
+      while(e<nfd.length && /[̀-ͯ]/.test(nfd[e])) e++;
+      parts.push(document.createTextNode(nfd.slice(last, s).normalize('NFC')));
+      const mk = document.createElement('mark'); mk.textContent = nfd.slice(s, e).normalize('NFC'); parts.push(mk);
+      last = e;
+    }
+    if(hit){ parts.push(document.createTextNode(nfd.slice(last).normalize('NFC'))); const frag=document.createDocumentFragment(); parts.forEach(p=>frag.appendChild(p)); n.parentNode.replaceChild(frag, n); }
+  });
+  return tpl.innerHTML;
+}
+function apply(){
+  const raw = q.value.trim(); const terms = norm(raw).split(/\s+/).filter(t=>t.length>1);
+  clearBtn.hidden = !raw;
+  let shown = 0;
+  document.querySelectorAll('[data-topic]').forEach(sec=>{
+    let any = 0;
+    sec.querySelectorAll('.card').forEach(card=>{
+      const audOk = !aud || card.dataset.aud.split(' ').includes(aud);
+      const hay = norm(card.textContent);
+      const ok = audOk && terms.every(t=>hay.includes(t));
+      card.classList.toggle('hidden', !ok);
+      card.querySelectorAll('[data-h]').forEach(el=>{ el.innerHTML = ok ? highlight(el.dataset.orig, terms) : el.dataset.orig; });
+      if(ok){ any++; if(terms.length) card.open = true; }
+    });
+    sec.classList.toggle('hidden', !any);
+    const prev = sec.previousElementSibling; if(prev && prev.classList.contains('banner')) prev.classList.toggle('hidden', !any || terms.length>0);
+    shown += any;
+  });
+  document.querySelectorAll('#toc li').forEach(li=>{
+    const id = li.querySelector('a').getAttribute('href').slice(1);
+    li.classList.toggle('hidden', document.getElementById(id).classList.contains('hidden'));
+  });
+  if(terms.length || aud){
+    status.textContent = shown ? `${shown} artículo${shown===1?'':'s'}${raw?` para “${raw}”`:''}${aud?` · ${AUD[aud]}`:''}` : `Sin resultados${raw?` para “${raw}”`:''}. Prueba con otra palabra o quita el filtro.`;
+    if(terms.length && shown) document.getElementById('main').scrollIntoView({block:'start'});
+  } else status.textContent = '';
+}
+q.addEventListener('input', apply);
+clearBtn.addEventListener('click', ()=>{ q.value=''; apply(); q.focus(); });
+document.querySelectorAll('.chip').forEach(b=>b.addEventListener('click', ()=>{
+  const v = b.dataset.aud; aud = (aud===v) ? null : v;
+  document.querySelectorAll('.chip').forEach(c=>c.setAttribute('aria-pressed', String(c.dataset.aud===aud)));
+  try{ aud?localStorage.setItem('crlw-aud',aud):localStorage.removeItem('crlw-aud'); }catch(e){}
+  apply();
+}));
+try{ const saved = localStorage.getItem('crlw-aud'); if(saved && AUD[saved]){ aud = saved; document.querySelector(`.chip[data-aud="${saved}"]`).setAttribute('aria-pressed','true'); apply(); } }catch(e){}
+if(location.hash){ const el = document.getElementById(location.hash.slice(1)); if(el){ if(el.tagName==='DETAILS') el.open = true; el.scrollIntoView(); } }
+</script>
+</body>
+</html>
